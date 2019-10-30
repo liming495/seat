@@ -1,0 +1,15 @@
+server:
+  port: 8769
+
+eureka:
+  instance:
+    hostname: node2
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://node1:${server.port}/eureka/
+spring:
+  application:
+    name: registry
+  profiles: node2

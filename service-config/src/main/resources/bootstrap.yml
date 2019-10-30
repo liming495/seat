@@ -1,3 +1,5 @@
+server:
+  port: 10100
 spring:
   application:
     name: service-config
@@ -17,14 +19,16 @@ spring:
     port: 5672
     username: guest
     password: guest
+  zipkin:
+    base-url: http://localhost:9411
 management:
   endpoints:
     web:
       exposure:
-        include: bus-refresh
-server:
-  port: 8882
-
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
 eureka:
   client:
     serviceUrl:
