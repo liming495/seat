@@ -6,9 +6,7 @@ spring:
       label: master
       server:
         git:
-          uri: https://github.com/forezp/SpringcloudConfig/
-          searchPaths: respo
-          username:
-          password:
+          uri: https://github.com/liming495/seat/
+          searchPaths: config-repo
 server:
   port: 8888
